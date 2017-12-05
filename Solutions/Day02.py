@@ -22,7 +22,7 @@ def getChecksum2(spreadsheet):
 if __name__ == "__main__":
 	# read file into spreadsheet (2d list of strings)
 	spreadsheet = []
-	with open('Day2Input.txt', 'r') as myfile:
+	with open('Day02Input.txt', 'r') as myfile:
 		for row in myfile:
 			spreadsheet.append(row.split())
 			

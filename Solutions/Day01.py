@@ -22,7 +22,7 @@ def solveCaptcha2(input):
 		
 if __name__ == "__main__":
 	# read file into string
-	with open('Day1Input.txt', 'r') as myfile:
+	with open('Day01Input.txt', 'r') as myfile:
 		input = ''.join(myfile.read().strip().split('\n'))
 		
 	captchaSolution1 = solveCaptcha1(input)
