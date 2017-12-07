@@ -23,7 +23,7 @@ def countCycles(memBanks):
 			cycles += 1
 			
 if __name__ == "__main__":
-	# read file into spreadsheet (2d list of strings)
+	# read file into spreadsheet (list of int)
 	memBanks = []
 	with open('Day06Input.txt', 'r') as myfile:
 		memBanks = myfile.readline().split()
