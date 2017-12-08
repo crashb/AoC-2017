@@ -1,4 +1,4 @@
-# solution to http://adventofcode.com/2017/day/6
+# solution to http://adventofcode.com/2017/day/7
 
 # given unparsed list (direct result of reading file), parses into this format:
 # list of programs, each with a name, weight, and possible children [ [(string), (int), [(string)]] ]
