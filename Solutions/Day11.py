@@ -35,6 +35,7 @@ def followPath(dirList):
 
 # part 2: find the furthest distance a given path (list of strings) strays from the origin.
 # returns maximum distance (int)
+# rank: 281
 def furthestDistance(dirList):
 	x = 0
 	y = 0
