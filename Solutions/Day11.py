@@ -34,18 +34,35 @@ def followPath(dirList):
 	return d
 
 # part 2: find the furthest distance a given path (list of strings) strays from the origin.
-# just runs the code from part 1 over and over.  not efficient in any way.
-# there exists a much more efficient way that only traverses the list once.
 # returns maximum distance (int)
 def furthestDistance(dirList):
-	print("Calculating furthest distance...")
-	currentDirs = []
+	x = 0
+	y = 0
 	maxDist = 0
-	for i in range(0, len(dirList)):
-		currentDirs.append(dirList[i])
-		newDist = followPath(currentDirs)
-		if newDist > maxDist:
-			maxDist = newDist
+	for dir in dirList:
+		if dir == "n":
+			y += 1
+		elif dir == "s":
+			y -= 1
+		elif dir == "ne":
+			x += 1
+		elif dir == "sw":
+			x -= 1
+		elif dir == "nw":
+			y += 1
+			x -= 1
+		elif dir == "se":
+			y -= 1
+			x += 1
+		else:
+			print("Invalid direction: \"" + dir + "\"")
+			return -1
+		# calculate z-coordinate of each traversed tile, and get shortest distance
+		z = 0 - x - y
+		d = max(abs(x), abs(y), abs(z))
+		# if we have a new furthest point, update maxDist
+		if d > maxDist:
+			maxDist = d
 	return maxDist
 
 if __name__ == "__main__":
