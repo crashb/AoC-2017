@@ -30,7 +30,7 @@ def getBitArray(hashList):
 				hashBits[i].append(0)
 	return hashBits
 
-# function to traverse an entire region of 1's in a given 2d array of 0's and 1'seek
+# function to traverse an entire region of 1's in a given 2d array of 0's and 1's
 # updates "visited" list with ordered tuple (row, col)
 # returns nothing - only purpose is to update "visited" list
 def getRegion(hashBits, row, col, visited):
