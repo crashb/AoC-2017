@@ -64,12 +64,11 @@ def getNumRegions(hashBits):
 	# test every bit for the start of a new region
 	for row in range(0, 128):
 		for col in range(0, 128):
-			if (row, col) not in visited:
-				if hashBits[row][col] != 0:
-					# mark bit as visited and traverse region
-					regions += 1
-					visited.append((row, col))
-					getRegion(hashBits, row, col, visited)
+			if hashBits[row][col] != 0 and (row, col) not in visited:
+				# mark bit as visited and traverse region
+				regions += 1
+				visited.append((row, col))
+				getRegion(hashBits, row, col, visited)
 	return regions
 	
 if __name__ == "__main__":
